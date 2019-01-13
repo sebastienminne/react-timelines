@@ -9,7 +9,8 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
     tracks,
     isOpen,
     hasButton,
-    sideComponent
+    sideComponent,
+    weather
   } = track
   const isExpandable = isOpen !== undefined
 
@@ -36,7 +37,12 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
             { isOpen ? 'Close' : 'Open' }
           </button>
         }
-        <span className="rt-track-key__title">{title}</span>
+        <div className="rt-track-key__title">{title}</div>
+        {weather && weather.length > 0 &&
+          <div className={weather}>
+          </div>
+        }
+
         { buildSideComponent() }
       </div>
       { isOpen && tracks && tracks.length > 0 &&
@@ -51,7 +57,8 @@ TrackKey.propTypes = {
     title: PropTypes.string.isRequired,
     tracks: PropTypes.arrayOf(PropTypes.shape({})),
     isOpen: PropTypes.bool,
-    hasButton: PropTypes.bool
+    hasButton: PropTypes.bool,
+    weather: PropTypes.string
   }),
   toggleOpen: PropTypes.func,
   clickTrackButton: PropTypes.func

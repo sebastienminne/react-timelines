@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
 
-  height: $react-timelines-track-height + $react-timelines-border-width;
+  height: $react-timelines-track-height + $react-timelines-border-width + $react-timelines-legend-height;
   line-height: $react-timelines-track-height;
   font-weight: bold;
   text-align: left;

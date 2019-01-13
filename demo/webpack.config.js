@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   module: {
@@ -11,12 +12,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '/'
+          }
+        }, {
+          loader: 'css-loader'
+        }]
       },
       {
         test: /\.svg$/,
         use: 'file-loader',
-      },
+      }
     ],
   },
   plugins: [
@@ -26,10 +34,14 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css',
+      chunkFilename: '[id].css'
     }),
+    new CopyWebpackPlugin([{ from: './src/keycloak.json', to: './' }])
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devServer: {
+    port: 9000
+  }
 }

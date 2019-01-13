@@ -2,7 +2,7 @@
 
 .rt-track__elements {
   position: relative;
-  height: $react-timelines-track-height + $react-timelines-border-width;
+  height: $react-timelines-track-height + $react-timelines-border-width + $react-timelines-legend-height;
   border-bottom: $react-timelines-border-width solid $react-timelines-keyline-color;
 }
 

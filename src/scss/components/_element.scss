@@ -17,6 +17,24 @@
   text-overflow: ellipsis;
 }
 
+.rt-element__date__start {
+  font-size: xx-small;
+  text-align: left;
+  position: absolute;
+  top: 29px;
+  left: -10px;
+  color: black;
+}
+
+.rt-element__date__end {
+  font-size: xx-small;
+  text-align: right;
+  position: absolute;
+  top: -25px;
+  right: -10px;
+  color: black;
+}
+
 .rt-element__tooltip {
   position: absolute;
   bottom: 100%;

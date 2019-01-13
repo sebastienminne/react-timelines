@@ -1,5 +1,6 @@
-export const START_YEAR = 2020
-export const NUM_OF_YEARS = 3
+export const START_YEAR = 2018
+export const NUM_OF_YEARS = 2
+export const DAYS_PER_YEAR = 365
 export const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 export const MONTHS_PER_YEAR = 12
 export const QUARTERS_PER_YEAR = 4

@@ -1,0 +1,8 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://127.0.0.1.nip.io:8080/auth",
+  "ssl-required": "external",
+  "resource": "planning",
+  "public-client": true,
+  "confidential-port": 0
+}

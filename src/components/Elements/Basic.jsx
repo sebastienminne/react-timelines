@@ -20,7 +20,9 @@ const Basic = ({
     {...buildDataAttributes(dataSet)}
   >
     <div className="rt-element__content" aria-hidden="true">
+      <span className="rt-element__date__start">{getDayMonth(start)}</span>
       <span className="rt-element__title">{ title }</span>
+      <span className="rt-element__date__end">{getDayMonth(end)}</span>
     </div>
     <div className="rt-element__tooltip">
       {
